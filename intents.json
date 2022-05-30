@@ -1,0 +1,69 @@
+{
+    "intents": [{
+            "tag": "salam",
+            "patterns": ["hai", "hello","hallo","hei"],
+            "responses": [ "halo, ada yang bisa saya bantu?"],
+            "context": [""]
+        },
+        {
+            "tag": "selamat",
+            "patterns": ["sampai jumpa", "selamat tinggal", "sampai jumpa"],
+            "responses": ["selamat bersenang-senang", "selamat datang kembali", "bye bye"],
+            "context": [""]
+        },
+        {
+            "tag": "terimakasih",
+            "patterns": ["Terima kasih", "oke", "Terimakasih", "terima kasih", "Luar biasa, terima kasih", "Terima kasih telah membantu saya", "wow", "hebat"],
+            "responses": ["Senang membantu!","Sama-sama", "Dengan senang hati"],
+            "context": [""]
+        },
+        {
+            "tag": "tidak ada Jawaban",
+            "patterns": [""],
+            "responses": ["Maaf, saya tidak mengerti Anda", "Tolong beri saya info lebih lanjut", "Tidak yakin saya mengerti itu"],
+            "context": [""]
+        },
+        {
+            "tag": "chatbot",
+            "patterns": ["dimana letak chatbot","terletak dimana fitur chatbot"],
+            "responses": ["chatbot terletak di menu help","fitur chatbot terletak di menu help"],
+            "context": [""]
+        },
+        {
+            "tag": "nama",
+            "patterns": ["nama saya adalah", "saya", "saya"],
+            "responses": ["Oooh senang bertemu denganmu {n}. Ada yang bisa saya bantu {n}", "Oh, saya akan mengingatnya {n}"],
+            "context": [""]
+        },
+        {
+            "tag": "absen",
+            "patterns": ["cara absensi?", "bagaimana cara absen?"],
+            "responses": ["cara absen pertama kita buka aplikasi ini setelah itu buka menu absensi terus hadapkan wajah kekamera.selesai!"],
+            "context": [""]
+        },
+        {
+            "tag": "error",
+            "patterns": ["aplikasi error tidak bisa jalan", "kamera diweb mati"],
+            "responses": ["segera hubungi admin untuk memperbaiki masalah tersebut"],
+            "context": [""]
+        },
+        {
+            "tag": "lupa",
+            "patterns": ["lupa password", "lupa username"],
+            "responses": ["hubungi admin untuk mengembalikannya"],
+            "context": [""]
+        },
+	{
+            "tag": "wajah",
+            "patterns": ["wajah tidak terdeteksi", "wajah salah"],
+            "responses": ["hadapkan wajah kekamera sampai terdeteksi nama anda"],
+            "context": [""]
+        },
+	{
+            "tag": "kamera",
+            "patterns": ["kamera tidak nyala", "kamera tidak muncul"],
+            "responses": ["tunggu sampai kamera nyala dan terdeteksi"],
+            "context": [""]
+        }
+    ]
+}

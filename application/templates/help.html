@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MyAbsensi</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.ico" rel="icon">
+  <link href="static/img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/stylebt.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/stylecb.css')}}"> -->
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        {% if session.username %}
+        <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class='bx bxs-grid-alt'></i></i>
+            <span>Dashboard</span></a></li>
+        <li><a href="{{url_for('absensi')}}" class="nav-link scrollto"><i class='bx bx-edit-alt'></i></i>
+            <span>Absen</span></a></li>
+        <li><a href="{{url_for('profil')}}" class="nav-link scrollto"><i class="bx bx-user"></i>
+            <span>Profile</span></a></li>
+        <li><a href="{{url_for('about')}}" class="nav-link scrollto"><i class="bx bx-server"></i> <span>About</span></a>
+        </li>
+        <li><a href="{{url_for('help')}}" class="nav-link scrollto active"><i class='bx bx-chat'></i></i>
+            <span>Help</span></a>
+        </li>
+        <li><a href="{{url_for('logout')}}" class="nav-link scrollto"><i class='bx bx-log-in-circle'></i></i></i>
+            <span>Logout</span></a></li>
+        {% else %}
+        <li><a href="{{url_for('index')}}" class="nav-link scrollto"><i class='bx bxs-grid-alt'></i></i>
+            <span>Dashboard</span></a></li>
+        <li><a href="{{url_for('about')}}" class="nav-link scrollto"><i class="bx bx-server"></i> <span>About</span></a>
+        </li>
+        <li><a href="{{url_for('help')}}" class="nav-link scrollto active"><i class='bx bx-chat'></i></i>
+            <span>Help</span></a>
+        </li>
+        <li><a href="{{url_for('login')}}" class="nav-link scrollto"><i class='bx bx-log-in-circle'></i></i></i>
+            <span>Login</span></a></li>
+        {% endif %}
+      </ul>
+    </nav><!-- .nav-menu -->
+  </header><!-- End Header -->
+
+  <div class="container">
+    <div class="chatbox">
+      <div class="chatbox__support">
+        <div class="chatbox__header">
+          <div class="chatbox__image--header">
+            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+          </div>
+          <div class="chatbox__content--header">
+            <h4 class="chatbox__heading--header">Bantuan</h4>
+            <p class="chatbox__description--header">Hai. Apa yang bisa saya bantu?</p>
+          </div>
+        </div>
+        <div class="chatbox__messages">
+          <div></div>
+        </div>
+        <div class="chatbox__footer">
+          <input type="text" placeholder="Write a message...">
+          <button class="chatbox__send--footer send__button">Kirim</button>
+        </div>
+      </div>
+      <!-- <div class="chatbox__button">
+        <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+      </div> -->
+    </div>
+  </div>
+
+  <script>
+    $SCRIPT_ROOT = '{{request.script_root|tojson}}';
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
